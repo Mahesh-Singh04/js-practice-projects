@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGRAOUND COLOR CHANGER!</title>
+    <style>
+        #box {
+            height: 20rem;
+            width: 30rem;
+            border: 5px solid black;
+            margin: 40px auto;
+        }
+        body {
+  
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  height: 100vh;            /* take full screen height */
+  margin: 0;
+  flex-direction: column;   /* so h2, box, button stack vertically */
+
+}
+#btn {
+  border: 2px solid black;
+  margin: 15px;
+  width: 150px;     /* set button width */
+  height: 40px;     /* set button height */
+  font-size: 18px;  /* resize the text inside */
+  border-radius: 8px; /* optional: rounded corners */
+  background-color: lightblue; /* optional: background */
+
+}
+    </style>
+</head>
+
+<body>
+    <h2 id="heading">BACKGRAOUND COLOR CHANGER!</h2>
+    <div id="box"></div>
+
+    <button onclick="changeColor()" id="btn">Change Color</button>
+
+    <script>
+
+        function changeColor() {
+            let colors = ["grey", "skyblue", "green", "yellow", "purple"];
+            let colors2 = ["grey", "skyblue", "green", "yellow", "purple"];
+
+            let randomIndex = Math.floor(Math.random() * colors.length);
+            let randomIndex2 = Math.floor(Math.random() * colors2.length);
+
+            document.body.style.backgroundColor = colors[randomIndex];
+            document.getElementById("box").style.backgroundColor = colors2[randomIndex2];
+        }
+
+    </script>
+</body>
+
+</html>
