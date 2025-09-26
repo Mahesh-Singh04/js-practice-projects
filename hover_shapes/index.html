@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapes Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Student Score Manager</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        input, button { padding: 8px; margin: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button { cursor: pointer; }
+        h1 { color: #333; }
+        ul { list-style: inside disc; }
+        .student-list, #result { margin-top: 20px; padding: 10px; background: white; border-radius: 5px; }
+    </style>
 </head>
 <body>
-   <div id="main">
-  
-   </div>
+    <h1>📚 Student Score Manager</h1>
+
+    <input type="text" id="studentName" placeholder="Student Name">
+    <input type="number" id="studentScore" placeholder="Score">
+    <button onclick="addStudent()">➕ Add Student</button>
+    <button onclick="clearStudents()">🗑 Clear All</button>
+
+    <div class="student-list">
+        <h2>All Students</h2>
+        <ul id="studentList"></ul>
+    </div>
+
+    <button onclick="showPassed()">✅ Show Passed Students</button>
+    <button onclick="showTopScorer()">🏆 Show Top Scorer</button>
+    <button onclick="showAverage()">📊 Show Average Score</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
