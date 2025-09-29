@@ -26,7 +26,7 @@ function addStudent() {
     let score = Number(document.getElementById("studentScore").value);
 
     if (name && score >= 0) {
-        students.push({name, score});
+        students.push({ name, score });
         saveToLocalStorage();
         displayStudents(students);
 
