@@ -24,3 +24,5 @@ arr.forEach(button => {
 
     })
 })
+
+//This is very basic....
